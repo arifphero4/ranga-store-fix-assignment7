@@ -20,7 +20,6 @@ const showProducts = (products) => {
       <p> <span class="text-primary">Avg Rating:</span> ${product.rating.rate}  <br> <span class="text-primary">Total Rating:</span> ${product.rating.count}</p>
       <h2>Price: $ ${product.price}</h2>
       <button onclick="addToCart(${product.id}, ${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      
       <button id="details-btn" class="btn btn-danger">Details</button></div>
       `;
     document.getElementById("all-products").appendChild(div);
@@ -33,6 +32,8 @@ const addToCart = (id, price) => {
 
   updateTaxAndCharge();
   document.getElementById("total-Products").innerText = count;
+
+// Call Updata total price
   updateTotal();
 };
 
@@ -47,7 +48,7 @@ const updatePrice = (id, value) => {
   const convertedOldPrice = getInputValue(id);
   const convertPrice = parseFloat(value);
   const total = convertedOldPrice + convertPrice;
-  document.getElementById(id).innerText = value.toFixed(2);
+  document.getElementById(id).innerText = total.toFixed(2);
 };
 
 // set innerText function

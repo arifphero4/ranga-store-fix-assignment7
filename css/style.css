@@ -57,7 +57,7 @@ body {
   justify-content: center;
 }
 .product{
-  background-color: #fff;
+  background-color: #fff; 
   overflow: hidden;
   border-radius: 15px;
 }
